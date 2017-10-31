@@ -2,11 +2,11 @@
 
 <form action="/owners" method="POST">
   <label>Name:</label>
-  
+
   <br></br>
-  
+
   <input type="text" name="owner[name]">
-  
+
   <br></br>
 
   <% @pets.each do |pet| %>
@@ -16,6 +16,6 @@
   <% end %>
 
   <br><br>
-  
+
   <input type="submit" value="Create Owner">
 </form>
