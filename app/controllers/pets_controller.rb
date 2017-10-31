@@ -10,7 +10,7 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    @pet = Pet.create(pet[:name])
+    @pet = Pet.create(params[:pet])
 
     redirect to "pets/#{@pet.id}"
   end
