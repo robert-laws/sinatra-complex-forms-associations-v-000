@@ -11,7 +11,9 @@ class OwnersController < ApplicationController
   end
 
   post '/owners' do
-    binding 'pry'
+    # {"name"=>"Hal", "pet_ids"=>["1", "2"]}
+    @owner = Owner.create(params[:owner])
+    redirect to "owners/#{@owner.id}"
   end
 
   get '/owners/:id/edit' do
